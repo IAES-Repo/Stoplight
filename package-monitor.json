@@ -1,0 +1,19 @@
+{
+  "name": "stoplight-health-monitor",
+  "version": "1.0.0",
+  "description": "Real-time health monitoring for Stoplight infrastructure dashboard",
+  "main": "health-monitor.js",
+  "scripts": {
+    "start": "node health-monitor.js",
+    "dev": "nodemon health-monitor.js"
+  },
+  "dependencies": {
+    "ws": "^8.14.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  },
+  "keywords": ["health", "monitoring", "websocket", "infrastructure"],
+  "author": "",
+  "license": "MIT"
+}
