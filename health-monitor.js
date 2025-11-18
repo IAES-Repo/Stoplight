@@ -37,6 +37,11 @@ const services = [
   { id: 'db-store', host: '10.129.47.232', port: 21, type: 'tcp' }
 ];
 
+// Filebeat health endpoint (run the sidecar on the Filebeat host and configure via env vars)
+const FILEBEAT_HOST = process.env.FILEBEAT_HOST || '10.129.47.226';
+const FILEBEAT_HEALTH_PORT = parseInt(process.env.FILEBEAT_HEALTH_PORT || '8089', 10);
+services.push({ id: 'filebeat', host: FILEBEAT_HOST, port: FILEBEAT_HEALTH_PORT, type: 'http', path: '/status' });
+
 async function checkTcpService(service) {
   return new Promise((resolve) => {
     const socket = new net.Socket();
