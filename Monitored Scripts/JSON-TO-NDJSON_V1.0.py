@@ -367,12 +367,12 @@ if __name__ == "__main__":
     except Exception:
         from .health_endpoint import start_tcp_listener, start_http_status
 
-    hp = int(os.environ.get('HEALTH_PORT', '9101'))
+    hp = int(os.environ.get('HEALTH_PORT', '50001'))
     ht = os.environ.get('HEALTH_TYPE', 'tcp')
     if ht.lower() == 'http':
-        start_http_status(hp, path=os.environ.get('HEALTH_PATH', '/status'), name='sensor-software')
+        start_http_status(hp, path=os.environ.get('HEALTH_PATH', '/status'), name='json-to-ndjson')
     else:
-        start_tcp_listener(hp, name='sensor-software')
+        start_tcp_listener(hp, name='json-to-ndjson')
 
     main()
 
