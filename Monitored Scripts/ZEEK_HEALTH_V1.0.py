@@ -21,7 +21,7 @@ from http.server import BaseHTTPRequestHandler, HTTPServer
 import time
 
 BIND = os.environ.get('HEALTH_BIND', '0.0.0.0')
-PORT = int(os.environ.get('HEALTH_PORT', '8089'))
+PORT = int(os.environ.get('HEALTH_PORT', '47760'))
 PATH = os.environ.get('HEALTH_PATH', '/status')
 CHECK_TIMEOUT = float(os.environ.get('HEALTH_CHECK_TIMEOUT', '2.0'))
 
