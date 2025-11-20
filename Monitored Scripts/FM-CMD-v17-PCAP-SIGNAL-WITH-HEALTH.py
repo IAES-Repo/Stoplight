@@ -1648,7 +1648,7 @@ class StartUp():
             MIN_RUN = str(self.INTERVAL)         
             
             self.pcapFile = "./PCAP/current.pcap"
-            cmd = "timeout " + MIN_RUN + " tcpdump -n -i " +nic+ " -Z root -w " + self.pcapFile
+            cmd = "timeout " + MIN_RUN + " tcpdump -n -i " +nic+ " -Z root -C 40 -w " + self.pcapFile
             LogEvent("TCPDUMP Start")
             
             try:
@@ -1756,5 +1756,6 @@ if __name__ == '__main__':
         start_tcp_listener(hp, name='sensor-software')
 
     main()
+
 
 
