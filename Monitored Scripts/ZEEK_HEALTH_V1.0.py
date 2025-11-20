@@ -8,11 +8,11 @@ a process matching the configured name is present in the output of `ps`.
 Configuration via environment variables:
 - ZEEK_PROCESS_NAME (default: 'zeek')
 - HEALTH_BIND (default: '0.0.0.0')
-- HEALTH_PORT (default: 8089)
+- HEALTH_PORT (default: 47760)
 - HEALTH_PATH (default: '/status')
 
 Author: Jordan Lanham
-Date: 2025-11-18
+Date: 2025-11-20
 """
 import os
 import json
