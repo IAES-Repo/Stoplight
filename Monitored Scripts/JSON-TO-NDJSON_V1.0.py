@@ -361,7 +361,7 @@ def main():
 
 if __name__ == "__main__":
 
-     # Start a TCP health listener for the sensor software (default 9101)
+     # Start a TCP health listener for the sensor software (default 50001)
     try:
         from health_endpoint import start_tcp_listener, start_http_status
     except Exception:
